@@ -6,9 +6,9 @@
 <configuration>  
     <!-- 全局别名设置，在映射文件中只需写别名，而不必写出整个类路径  -->  
     <typeAliases>    
-         <typeAlias type="com.wei.model.Person" alias="Person"/>  
+         <typeAlias type="com.wei.model.User" alias="User"/>  
     </typeAliases>     
-      <mappers>  
-        <mapper resource="com/wei/mapping/PersonMapper.xml" />  
+    <mappers>  
+        <mapper resource="com/wei/mapping/UserMapper.xml" />  
     </mappers>
 </configuration>
