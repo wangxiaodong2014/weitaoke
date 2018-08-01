@@ -31,7 +31,7 @@
         <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
         <property name="minEvictableIdleTimeMillis" value="300000" />
         <!-- 用来检测连接是否有效的sql，要求是一个查询语句-->
-        <property name="validationQuery" value="SELECT 1" />
+        <property name="validationQuery" value="SELECT 1 FROM DUAL" />
         <!-- 申请连接的时候检测 -->
         <property name="testWhileIdle" value="true" />
         <!-- 申请连接时执行validationQuery检测连接是否有效，配置为true会降低性能 -->

@@ -74,25 +74,25 @@ public class User {
 		this.email = email;
 	}
 
-	public Date getInputdate() {
+/*	public Date getInputdate() {
 		return inputdate;
 	}
 
 	public void setInputdate(Date inputdate) {
 		this.inputdate = inputdate;
-	}
+	}*/
 
 	public String getInputuser() {
 		return inputuser;
 	}
 
-	public void setInputuser(String inputuser) {
+	/*public void setInputuser(String inputuser) {
 		this.inputuser = inputuser;
 	}
 
 	public Date getModifydate() {
 		return modifydate;
-	}
+	}*/
 
 	public void setModifydate(Date modifydate) {
 		this.modifydate = modifydate;
