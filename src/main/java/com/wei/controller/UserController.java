@@ -42,7 +42,7 @@ public class UserController {
         result.put("total", users.size());
         log.info("userController/listUsers");
         ResponseUtil.write(request,response, result);
-        return "";
+        return null;
 	}
 
 	public IUserService getiUserService() {
