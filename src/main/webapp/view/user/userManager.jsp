@@ -26,6 +26,9 @@
             </tr>
         </thead>
     </table>
+    <br/>
+    session中names:${sessionScope.user.name }
+    session中age:${sessionScope.user.age }
 </body>
 <script type="text/javascript">
 	function searchUser() {
