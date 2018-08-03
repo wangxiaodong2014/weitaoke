@@ -44,7 +44,7 @@ public class UserController {
 	
 	
 	@RequestMapping(value="listUsers",method = RequestMethod.POST)
-	public String listUser(HttpServletRequest request,HttpServletResponse response,Map<String,Object> map,Model model,SessionStatus sessionStatus) throws Exception{
+	public String listUser(HttpServletRequest request,HttpServletResponse response,Map<String,Object> map,Model model,SessionStatus sessionStatus,HttpSession session) throws Exception{
 		List<User> users = iUserService.loadUsers();
         JSONObject result = new JSONObject();
         JSONArray jsonArray = JSONArray.fromObject(users);
@@ -55,11 +55,18 @@ public class UserController {
         result.put("total", users.size());
         log.info("userController/listUsers");
         ResponseUtil.write(request,response, result);
-        //sessionStatus.setComplete();
-        model.addAttribute("user", userMap);
-        return "/view/user/userManager";
+        User user = (User)session.getAttribute("user");
+        System.out.println("session:"+user.getName());
+        return null;
 	}
-
+	@RequestMapping(value="sessionForward",method = RequestMethod.GET)
+	public String sessionForward(HttpServletRequest request,HttpServletResponse response,Map<String,Object> map,Model model,SessionStatus sessionStatus,HttpSession session) throws Exception{
+        User user = new User();
+        user.setName("hahaha");
+        session.setAttribute("user", user);
+        return "/view/user/success";
+	}
+	
 	public IUserService getiUserService() {
 		return iUserService;
 	}

@@ -15,21 +15,9 @@
     <h2>Basic DataGrid</h2>
     <div style="margin:20px 0;"></div>
     
-    <table id="users" class="easyui-datagrid" title="Basic DataGrid" style="width:700px;height:250px"
-            data-options="singleSelect:true,collapsible:true,url:'${pageContext.request.contextPath}/userController/listUsers',method:'post'">
-        <thead>
-            <tr>
-                <th data-options="field:'name',width:80">name</th>
-                <th data-options="field:'code',width:100">code</th>
-                <th data-options="field:'age',width:80,align:'right'">age</th>
-                <th data-options="field:'email',width:250">email</th>
-            </tr>
-        </thead>
-    </table>
     <br/>
     session中names:${sessionScope.user.name }
     session中age:${sessionScope.user.age }
-    <a href="${pageContext.request.contextPath}/userController/sessionForward">diandian</a>
 </body>
 <script type="text/javascript">
 	function searchUser() {
